@@ -1,0 +1,29 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %} - Sevo's Blog</title>
+
+    <link rel="stylesheet" href="{% static "vendor/bootstrap/css/bootstrap.css" %}">
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+    {% block css_files %}{% endblock %}
+</head>
+<body>
+
+    {% block content %}{% endblock %}
+
+    <footer class="bg-light py-5">
+        <div class="container">
+            
+        </div>
+    </footer>
+    
+
+    <script src="{% static "vendor/bootstrap/js/bootstrap.bundle.min.js" %}"></script>
+    <script src="{% static "js/app.js" %}"></script>
+    {% block js %}{% endblock %}
+</body>
+</html>
